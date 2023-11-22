@@ -79,7 +79,9 @@ var CypressTestRailReporter = /** @class */ (function (_super) {
         });
         runner.on("end", function () {
             // publish test cases results & close the run
+            console.log('START PUBLISH RESULT TO TEST RAIL')
             _this.testRail.publishResults(_this.results);
+            console.log('FINISH PUBLISH RESULT TO TEST RAIL')
         });
         return _this;
     }
